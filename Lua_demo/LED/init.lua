@@ -1,3 +1,17 @@
+function signal()
+    pwm.setup(4,3,512)
+    pwm.start(4)
+end
+
+function kill_signal()
+    pwm.close(4)
+    gpio.mode(4,gpio.OUTPUT)
+    gpio.write(4,gpio.HIGH)
+end
+
+signal()
+
+
 wifi.setmode(wifi.STATION)
 station_cfg = {}
 station_cfg.ssid = " "
@@ -22,15 +36,15 @@ end
 ---------------Default configuration--------------
 if (station_cfg.ssid == " " or station_cfg.ssid == "")
 then
-   station_cfg.ssid = "360WiFi-3F8418"
-   station_cfg.pwd =  "wzlwggw001001"
+   station_cfg.ssid = "heartbeats"
+   station_cfg.pwd =  "24682468"
 end
 
 ---------------Default configuration--------------
 
 -----------------Start wifi connect------------------
 wifi.sta.config(station_cfg)
-wifi.sta.connect() 
+wifi.sta.connect()
 
 ----------------------- TIM init ----------------------- 
 Wifi_TIM = tmr.create()
@@ -52,6 +66,7 @@ function()
             
     else
         Wifi_TIM:stop()
+        print()
         print("WIFI connected")
         dofile("mqttdemo.lua")
     end
@@ -83,3 +98,4 @@ enduser_setup.start(
   print -- Lua print function can serve as the debug callback
 )
 end
+

@@ -1,0 +1,44 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "物联网"
+			}
+
+		},
+		{
+			"path":"pages/mqtt/mqtt",
+			"style":{
+				"navigationBarTitleText":"MQTT"
+			}
+		}
+		
+	],
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#10a0ff", //导航栏背景颜色（同状态栏背景色）
+		"navigationBarTextStyle": "black", //导航栏标题颜色及状态栏前景颜色，仅支持 black/white
+		"navigationBarTitleText": "物联网IoT", //导航栏标题文字内容
+		"enablePullDownRefresh": false, //是否开启下拉刷新
+		"onReachBottomDistance": 50,
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"color":"#333333",
+		"position":"bottom",
+		"backgroundColor":"#007AFF",
+		"fontSize":"20",
+		"borderStyle":"black",
+		"selectedColor":"#333333",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"index"
+			},
+			{
+				"pagePath":"pages/mqtt/mqtt",
+				"text":"MQTT"
+			}
+		]
+	}
+}

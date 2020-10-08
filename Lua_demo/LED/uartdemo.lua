@@ -6,13 +6,13 @@ uart.on("data", "\n",
     if string.find(data,"ON",1)
     then
         --uart.on("data") -- unregister callback function
-        m:publish("/topic", "LED_ON", 0, 0)
+        m:publish("/LED", "\"LED_ON\":true", 0, 0)
     elseif string.find(data,"OFF",1)
     then 
         --print("bbb")
-        m:publish("/topic", "LED_OFF", 0, 0) 
+        m:publish("/LED", "\"LED_ON\":false", 0, 0) 
     else
-        m:publish("/topic", data, 0, 0)
+        m:publish("/upload", data, 0, 0)
     end
 end, 0)
     
