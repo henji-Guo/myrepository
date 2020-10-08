@@ -15,10 +15,10 @@
  * 
  * Change Logs:
  * Date		           Author        Notes
- * 2020年07月05日     GHJ          the first version
- * 2020年07月14日     GHJ          add mqtt to connect EMQX
- * 2020年10月05日     GHJ          add Aliyun MQTT rules to connect Aliyun IoT
- * 2020年10月06日     GHJ          add AliyunIoT function to connect Aliyun IoT 
+ * 2020年07月05日     	GHJ          the first version
+ * 2020年07月14日    	GHJ          add mqtt to connect EMQX
+ * 2020年10月05日     	GHJ          add Aliyun MQTT rules to connect Aliyun IoT
+ * 2020年10月06日     	GHJ          add AliyunIoT function to connect Aliyun IoT 
  * 
  * 
  * ===================================================================================
